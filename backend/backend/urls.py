@@ -18,14 +18,27 @@ from django.urls import path, include
 
 
 from rest_framework.routers import DefaultRouter
+from rest_framework_nested import routers
 from api import views
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
-router.register(r'project', views.ProjectViewSet)
+router.register(r'projects', views.ProjectViewSet)
+
+task_router = routers.NestedSimpleRouter(
+    router,
+    r'projects',
+    lookup='project')
+
+task_router.register(
+    r'tasks',
+    views.TaskViewSet,
+    basename='project-tasks'
+)
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('', include(task_router.urls)),
 ]
