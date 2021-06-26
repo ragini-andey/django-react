@@ -17,3 +17,17 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+
+#### Running react app (frontend) locally
+
+
+Run below commends to run frontend server
+
+```sh
+cd frontend
+npm install bootstrap
+npm install react-router-dom
+npm install axios
+npm strat
+```
+
