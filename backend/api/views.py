@@ -19,7 +19,6 @@ class TaskViewSet(ModelViewSet):
     serializer_class = TaskSerializer
     
     def get_queryset(self, *args, **kwargs):
-        import pdb; pdb.set_trace()
         project_id = self.kwargs.get("project_pk")
         try:
             project = Project.objects.get(id=project_id)
