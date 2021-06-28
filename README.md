@@ -1,6 +1,10 @@
 # django-react
 Eample CRUD application using django and react
-[Demo app on heroku](https://djangoui.herokuapp.com/projects/)
+
+
+### Demos:
+- [Backend app on heroku](https://djangoui.herokuapp.com/projects/)
+- [react app on heroku](https://react-dj-demo.herokuapp.com/)
 
 
 #### Running django app (Backend) locally
