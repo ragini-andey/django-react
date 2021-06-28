@@ -151,21 +151,7 @@ export default class Project extends Component {
               </div>
             </form>
 
-            {currentProject.published ? (
-              <button
-                className="badge badge-primary mr-2"
-                onClick={() => this.updatePublished(false)}
-              >
-                UnPublish
-              </button>
-            ) : (
-              <button
-                className="badge badge-primary mr-2"
-                onClick={() => this.updatePublished(true)}
-              >
-                Publish
-              </button>
-            )}
+            
 
             <button
               className="badge badge-danger mr-2"

@@ -6,6 +6,7 @@ import "./App.css";
 import AddProject from "./components/add-project.component";
 import Project from "./components/project.component";
 import ProjectsList from "./components/project-list.component";
+import TasksList from "./components/tasks.component";
 
 class App extends Component {
   render() {
@@ -33,6 +34,7 @@ class App extends Component {
           <Switch>
             <Route exact path={["/", "/projects"]} component={ProjectsList} />
             <Route exact path="/add" component={AddProject} />
+            <Route path="/projects/:id/tasks/" component={TasksList} />
             <Route path="/projects/:id" component={Project} />
           </Switch>
         </div>

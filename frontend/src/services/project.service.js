@@ -20,6 +20,9 @@ class ProjectDataService {
   delete(id) {
     return http.delete(`/projects/${id}/`);
   }
+  getTasks(id) {
+    return http.get(`/projects/${id}/tasks/`);
+  }
 
 }
 

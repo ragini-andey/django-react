@@ -97,7 +97,7 @@ export default class ProjectsList extends Component {
                 <label>
                   <strong>Status:</strong>
                 </label>{" "}
-                {currentProject.published ? "Published" : "Pending"}
+                {currentProject.is_active ? "Active" : "Archived"}
               </div>
 
               <Link
@@ -105,6 +105,12 @@ export default class ProjectsList extends Component {
                 className="badge badge-warning"
               >
                 Edit
+              </Link> | 
+              <Link
+                to={"/projects/" + currentProject.id+"/tasks/"}
+                className="badge badge-warning"
+              >
+                View tasks
               </Link>
             </div>
           ) : (
